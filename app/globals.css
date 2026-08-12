@@ -44,3 +44,21 @@
 button {
   cursor: pointer;
 }
+
+.testimonial-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #d4dcc0;
+    opacity: 1;
+    margin: 0 4px !important;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.testimonial-pagination .swiper-pagination-bullet-active {
+    background-color: #4a7c3c;
+}
+
+/* dynamicBullets shrinks the outer dots automatically via these classes */
+.testimonial-pagination .swiper-pagination-bullet-active-main {
+    transform: scale(1);
+}

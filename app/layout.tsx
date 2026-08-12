@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import { Urbanist } from 'next/font/google'
+import Footer from "@/components/Footer";
 
 const urbanist = Urbanist({
   variable: "--font-urbanist",
@@ -20,11 +21,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${urbanist.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body suppressHydrationWarning>
+      <body suppressHydrationWarning className="min-h-screen flex flex-col">
         <Header />
-        <div className="pt-[140px] md:pt-[162px]">
+        <div className="pt-[140px] md:pt-[162px] flex-1">
           {children}
         </div>
+        <Footer />
       </body>
     </html>
   );
