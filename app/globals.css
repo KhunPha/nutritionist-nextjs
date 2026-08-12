@@ -1,26 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-urbanist: "Urbanist", sans-serif;
+
+  /* Color */
+  --color-absolute-white: #FFF;
+  --color-absolute-black: #000;
+
+  --color-green-shades-70: #CBEA7B;
+  --color-green-shades-75: #D3EE91;
+  --color-green-shades-80: #DCF1A7;
+  --color-green-shades-85: #E5F5BD;
+  --color-green-shades-90: #EEF8D3;
+  --color-green-shades-95: #F6FBE9;
+  --color-green-shades-97: #FAFDF2;
+  --color-green-shades-99: #FDFEFB;
+
+  --color-dark-green-shades-15: #1A3129;
+  --color-dark-green-shades-20: #234338;
+  --color-dark-green-shades-25: #2C5446;
+  --color-dark-green-shades-30: #346454;
+  --color-dark-green-shades-40: #468671;
+  --color-dark-green-shades-60: #79B9A4;
+  --color-dark-green-shades-80: #BCDCD1;
+  --color-dark-green-shades-90: #DDEDE8;
+
+  --color-grey-shades-10: #191919;
+  --color-grey-shades-15: #262626;
+  --color-grey-shades-20: #333333;
+  --color-grey-shades-30: #4C4C4D;
+  --color-grey-shades-35: #59595A;
+  --color-grey-shades-40: #656567;
+  --color-grey-shades-60: #98989A;
+  --color-grey-shades-90: #E6E6E6;
+  --color-grey-shades-95: #F2F2F2;
+  --color-grey-shades-97: #F7F7F7;
+  --color-grey-shades-99: #FCFCFC;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+button {
+  cursor: pointer;
 }
