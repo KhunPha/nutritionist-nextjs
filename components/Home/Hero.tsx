@@ -1,26 +1,66 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 const Hero = () => {
   return (
     <div className="w-full">
       <div className="hidden md:grid grid-cols-2">
-        <div className="w-full h-full bg-green-shades-80 rounded-br-[50px]">
+        <motion.div
+          initial={{ y: -400, opacity: 1 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            duration: 1,
+            ease: "easeOut"
+          }}
+          className="w-full h-full bg-green-shades-80 rounded-br-[50px]">
           <img src="bg_style.png" alt="bg_style" className="w-full h-full" />
-        </div>
+        </motion.div>
 
         <div className="flex flex-col justify-center p-10 space-y-4">
-          <p className="text-[22px] text-dark-green-shades-15 font-semibold underline underline-offset-8">
+          <motion.p
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              duration: 0.2,
+              ease: "easeOut",
+            }}
+            className="text-[22px] text-dark-green-shades-15 font-semibold underline underline-offset-8"
+          >
             Transform Your Health with
-          </p>
-          <p className="text-[48px] text-dark-green-shades-15 font-bold">
+          </motion.p>
+          <motion.p
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              duration: 0.4,
+              ease: "easeOut"
+            }}
+            className="text-[48px] text-dark-green-shades-15 font-bold">
             Personalized Nutrition Coaching
-          </p>
-          <p className="text-[16px] text-grey-shades-20 font-medium">
+          </motion.p>
+          <motion.p 
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              duration: 0.6,
+              ease: "easeOut"
+            }}
+            className="text-[16px] text-grey-shades-20 font-medium">
             Welcome to Nutritionist, your partner in achieving optimal health
             through personalized nutrition coaching. Our certified nutritionists
             are here to guide you on your weight loss journey, providing
             customized plans and ongoing support. Start your transformation
             today and experience the power of personalized nutrition coaching.
-          </p>
-          <div className="flex gap-3">
+          </motion.p>
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              duration: 0.8,
+              ease: "easeOut"
+            }}
+            className="flex gap-3">
             <button className="text-grey-shades-15 text-[14px] font-semibold bg-green-shades-70 rounded-md p-4">
               Get Starter Today
             </button>
@@ -28,9 +68,16 @@ const Hero = () => {
             <button className="text-grey-shades-15 text-[14px] font-semibold bg-green-shades-95 border border-green-shades-85 rounded-md p-4">
               Book a Demo
             </button>
-          </div>
+          </motion.div>
 
-          <div className="flex gap-2 items-center">
+          <motion.div
+          initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              duration: 1,
+              ease: "easeOut"
+            }}
+            className="flex gap-2 items-center">
             <div className="flex w-[90px] h-[50px] items-center justify-center border  border-green-shades-70 rounded-full relative">
               <img
                 src={"profile.png"}
@@ -52,7 +99,7 @@ const Hero = () => {
             <p className="text-[18px] font-semibold text-dark-green-shades-20">
               Happy Customers
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
 

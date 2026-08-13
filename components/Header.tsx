@@ -4,6 +4,7 @@ import { menuItems } from "@/constants/menu";
 import { ArrowRight, Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const pathname = usePathname();
@@ -53,9 +54,13 @@ const Header = () => {
             })}
           </ul>
 
-          <button className="text-[14px] font-semibold text-grey-shades-15 px-4 py-4 rounded-md bg-green-shades-70 cursor-pointer"> 
+          <motion.button 
+            whileHover={{ scale: 1.06 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+            className="text-[14px] font-semibold text-grey-shades-15 px-4 py-4 rounded-md bg-green-shades-70 cursor-pointer"> 
             Contact Us
-          </button>
+          </motion.button>
         </div>
 
         {/* Mobile Menu */}

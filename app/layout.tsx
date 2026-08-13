@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import { Urbanist } from 'next/font/google'
 import Footer from "@/components/Footer";
+import FollowCursor from "@/components/FollowCursor";
 
 const urbanist = Urbanist({
   variable: "--font-urbanist",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
     >
       <body suppressHydrationWarning className="min-h-screen flex flex-col">
+        <FollowCursor />
         <Header />
         <div className="pt-[140px] md:pt-[162px] flex-1">
           {children}
